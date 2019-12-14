@@ -84,13 +84,10 @@ public class PlayerMove : MonoBehaviour
             }
 
             if (Input.GetKeyDown(KeyCode.W) && touchingGround)
-            {
-                //rb.velocity += Vector2.up * JumpSpeed * -(Physics2D.gravity.y * Time.deltaTime); /// ();
-
+            { 
                 // When jump button pressed,
                 rb.velocity = new Vector2(0, jumpVelocity);
 
-                //rb.AddForce(Vector2.up * JumpSpeed, ForceMode2D.Impulse);
             }
         }
 
@@ -108,6 +105,14 @@ public class PlayerMove : MonoBehaviour
             {
                 //Move the animal to the right
                 moveVector = Vector3.right;
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.UpArrow) && touchingGround)
+            { 
+                // When jump button pressed,
+                rb.velocity = new Vector2(0, jumpVelocity);
+
             }
 
         }
