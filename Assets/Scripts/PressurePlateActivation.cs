@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeverActivation : MonoBehaviour
+public class PressurePlateActivation : MonoBehaviour
 {
 
-    public GameObject[] ToActivate;
-    public bool IsActivated {get; set;}
+    public bool IsActivated { get; set; }
     private bool activeObjects = false;
+    public GameObject[] ToActivate;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +30,27 @@ public class LeverActivation : MonoBehaviour
             Deactivate();
             activeObjects = false;
         }
-        
+
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Animal") || collision.gameObject.CompareTag("Robot"))
+        {
+            Debug.Log("Pressure Plate Activated");
+            IsActivated = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Animal") || collision.gameObject.CompareTag("Robot"))
+        {
+            Debug.Log("Pressure Plate Deactivated");
+            IsActivated = false;
+        }
+    }
+
 
     private void Activate()
     {
@@ -39,7 +59,7 @@ public class LeverActivation : MonoBehaviour
             obj.SetActive(true);
         }
     }
-    
+
     private void Deactivate()
     {
         foreach (var obj in ToActivate)
@@ -47,5 +67,4 @@ public class LeverActivation : MonoBehaviour
             obj.SetActive(false);
         }
     }
-
 }
