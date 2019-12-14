@@ -15,7 +15,9 @@ public class ObjectSlot : MonoBehaviour
     
     private void Start()
     {
-        
+
+        heldObjects = new List<Transform>();
+
         moveScript = this.GetComponent<PlayerMove>();
 
         List<Transform> allChildren = new List<Transform>(GetComponentsInChildren<Transform>());

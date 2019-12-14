@@ -13,7 +13,7 @@ public class GiveBodyPart : MonoBehaviour
     private ObjectSlot slot;
 
     private Transform animal;
-    private bool firstTime = true;
+    //private bool firstTime = true;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +50,21 @@ public class GiveBodyPart : MonoBehaviour
                     if (legs != null)
                     {
                         legs[0].SetParent(animal);
-                        animal.GetComponent<ObjectSlot>().heldObjects[0] = legs[0];
+                        List<Transform> animalHeldObjects = animal.GetComponent<ObjectSlot>().heldObjects;
+                        
+                        if (animalHeldObjects == null)
+                        {
+                            Debug.Log("IS NULL");
+                        }
+
+                        if (animalHeldObjects.Count == 0)
+                        {
+                            animalHeldObjects.Add(legs[0]);
+                        }
+                        else
+                        {
+                            animalHeldObjects[0] = legs[0];
+                        }
                         slot.heldObjects.Remove(legs[0]);
                         
                     }
