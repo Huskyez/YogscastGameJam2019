@@ -7,7 +7,7 @@ public class LeverActivation : MonoBehaviour
 
     public GameObject[] ToActivate;
     public bool IsActivated {get; set;}
-    private bool activeObjets = false;
+    private bool activeObjects = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,15 +19,15 @@ public class LeverActivation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsActivated && !activeObjets)
+        if (IsActivated && !activeObjects)
         {
             Activate();
-            activeObjets = true;
+            activeObjects = true;
         }
-        else if (!IsActivated && activeObjets)
+        else if (!IsActivated && activeObjects)
         {
             Deactivate();
-            activeObjets = false;
+            activeObjects = false;
         }
         
     }
