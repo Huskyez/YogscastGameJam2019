@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerMove))]
+[RequireComponent(typeof(PlayerMove)), RequireComponent(typeof(ActivateLever))]
 public class ObjectSlot : MonoBehaviour
 {
     
     public List<Transform> heldObjects;
+    
     private PlayerMove moveScript;
+    private ActivateLever activateScript;
 
     public int NrHands { get; set; }
     public int NrLegs { get; set; }
@@ -16,9 +18,14 @@ public class ObjectSlot : MonoBehaviour
     private void Start()
     {
 
+        moveScript = GetComponent<PlayerMove>();
+        activateScript = GetComponent<ActivateLever>();
+
+        moveScript.enabled = false;
+        activateScript.enabled = false;
+
         heldObjects = new List<Transform>();
 
-        moveScript = this.GetComponent<PlayerMove>();
 
         List<Transform> allChildren = new List<Transform>(GetComponentsInChildren<Transform>());
 
@@ -44,14 +51,11 @@ public class ObjectSlot : MonoBehaviour
 
             if (go.CompareTag("Leg"))
             {
-
                 NrLegs += 1;
-
             }
 
             if (go.CompareTag("Hand"))
             {
-
                 NrHands += 1;
             }
 
@@ -64,6 +68,15 @@ public class ObjectSlot : MonoBehaviour
         else
         {
             moveScript.enabled = false;
+        }
+
+        if (NrHands > 0)
+        {
+            activateScript.enabled = true;
+        }
+        else 
+        {
+            activateScript.enabled = false;
         }
 
         //Animal handling
