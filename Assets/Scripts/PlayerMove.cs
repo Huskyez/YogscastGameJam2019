@@ -6,15 +6,16 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
 
-    enum PlayerCharacters 
+    public enum PlayerCharacters 
     { 
         Robot,
         Animal
-    };
+    }
 
     //The type of the character
     [SerializeField]
-    private PlayerCharacters character;
+    private PlayerCharacters _character;
+    public PlayerCharacters character { get { return _character; } }
 
 
     public float MoveSpeed;
@@ -49,12 +50,6 @@ public class PlayerMove : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void FixedUpdate()
     {
 
@@ -85,12 +80,9 @@ public class PlayerMove : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.W) && touchingGround)
             {
-                //rb.velocity += Vector2.up * JumpSpeed * -(Physics2D.gravity.y * Time.deltaTime); /// ();
-
-                // When jump button pressed,
+                // When jump button pressed
                 rb.velocity = new Vector2(0, jumpVelocity);
-
-                //rb.AddForce(Vector2.up * JumpSpeed, ForceMode2D.Impulse);
+           
             }
         }
 
