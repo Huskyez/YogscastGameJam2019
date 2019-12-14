@@ -58,10 +58,15 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
 
+        if (!CanMove)
+            return;
+
         // Step update
         stepMovement = (rb.velocity + Vector2.up * Physics2D.gravity.y * Time.deltaTime * 0.5f) * Time.deltaTime;
         transform.Translate(stepMovement);
         rb.velocity += Physics2D.gravity * Time.deltaTime;
+
+
 
         if (character == PlayerCharacters.Robot)
         {
@@ -107,13 +112,11 @@ public class PlayerMove : MonoBehaviour
 
         }
 
-        touchingGround = Physics2D.OverlapCircle(gameObject.GetComponent<Rigidbody2D>().position, checkRadius, Ground);
+        touchingGround = Physics2D.OverlapCircle(rb.position, checkRadius, Ground);
 
-        if (CanMove)
-        {
-            transform.Translate(moveVector * MoveSpeed * Time.deltaTime);
-            moveVector = Vector3.zero;
-        }
+        transform.Translate(moveVector * MoveSpeed * Time.deltaTime);
+        moveVector = Vector3.zero;
+
         // Code for faster falling
         if (rb.velocity.y < 0.0f)
         {
