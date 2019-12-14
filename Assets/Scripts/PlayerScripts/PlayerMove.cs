@@ -79,17 +79,10 @@ public class PlayerMove : MonoBehaviour
             }
 
             if (Input.GetKeyDown(KeyCode.W) && touchingGround)
-<<<<<<< HEAD:Assets/Scripts/PlayerScripts/PlayerMove.cs
             { 
                 // When jump button pressed,
                 rb.velocity = new Vector2(0, jumpVelocity);
 
-=======
-            {
-                // When jump button pressed
-                rb.velocity = new Vector2(0, jumpVelocity);
-           
->>>>>>> origin/forkyVersion:Assets/Scripts/PlayerMove.cs
             }
         }
 
