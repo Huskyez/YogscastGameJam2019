@@ -32,11 +32,28 @@ public class GameManagerScript : MonoBehaviour
     {
         if (IsAtExitRobot && IsAtExitAnimal)
         {
-            //SceneManager.LoadScene(LevelToLoad);
-            
-            //TODO: Change Level 
-            Debug.Log("CHANGE LEVEL");
-
+            Debug.Log("CHANGE LEVEL TO " + LevelToLoad);
+            SceneManager.LoadScene(LevelToLoad);           
         }
+    }
+
+
+    // ------------------------------ UI CONTROLLER ----------------------------------------------------------------------------------------
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(LevelToLoad);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+
+    public void ReloadGame()
+    {
+        Debug.Log(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
