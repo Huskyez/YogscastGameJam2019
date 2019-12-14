@@ -13,10 +13,9 @@ public class PlayerMove : MonoBehaviour
     }
 
     //The type of the character
-    [SerializeField]
-    private PlayerCharacters _character;
-    public PlayerCharacters character { get { return _character; } }
-
+    //[SerializeField]
+    // private PlayerCharacters _character;
+    public PlayerCharacters character;
 
     public float MoveSpeed;
     public float JumpSpeed;
