@@ -12,6 +12,7 @@ TagManager:
   - Animal
   - Robot
   - Lever
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
