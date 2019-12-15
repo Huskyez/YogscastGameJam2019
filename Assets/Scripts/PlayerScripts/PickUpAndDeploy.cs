@@ -37,7 +37,17 @@ public class PickUpAndDeploy : MonoBehaviour
     {
         if (hasAnimal)
         {
-            animal.transform.position = transform.position + (Vector3.up + Vector3.left) * 0.5f;
+
+            if (gameObject.GetComponent<PlayerMove>().direction == PlayerMove.Direction.right)
+            {
+                animal.transform.position = transform.position + (Vector3.up + Vector3.left) * 0.5f;
+                animal.GetComponent<SpriteRenderer>().flipX = false;
+            }
+            else
+            {
+                animal.transform.position = transform.position + (Vector3.up + Vector3.right) * 0.5f;
+                animal.GetComponent<SpriteRenderer>().flipX = true;
+            }
 
             if (Input.GetKeyDown(KeyCode.R))
             {

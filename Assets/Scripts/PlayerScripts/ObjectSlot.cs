@@ -12,6 +12,11 @@ public class ObjectSlot : MonoBehaviour
     private ActivateLever activateScript;
     private PlayerClimb climbScript;
 
+    public Sprite[] RobotStates;
+    public Sprite[] AnimalStates;
+
+    private SpriteRenderer renderer;
+
     public int NrHands { get; set; }
     public int NrLegs { get; set; }
 
@@ -22,6 +27,8 @@ public class ObjectSlot : MonoBehaviour
         moveScript = GetComponent<PlayerMove>();
         activateScript = GetComponent<ActivateLever>();
         climbScript = GetComponent<PlayerClimb>();
+
+        renderer = GetComponent<SpriteRenderer>();
 
         moveScript.enabled = false;
         activateScript.enabled = false;
@@ -81,6 +88,29 @@ public class ObjectSlot : MonoBehaviour
         {
             activateScript.enabled = false;
             climbScript.enabled = false;
+        }
+
+        changeSprites();
+        
+    }
+
+    private void changeSprites()
+    {
+        if (gameObject.name == "Robot")
+        {
+            renderer.sprite = RobotStates[3 * NrHands + NrLegs]; 
+        }
+
+        if (gameObject.name == "Animal")
+        {
+            if (NrHands > 0)
+            {
+                renderer.sprite = AnimalStates[0];
+            }
+            if (NrLegs > 0)
+            {
+                renderer.sprite = AnimalStates[1];
+            }
         }
     }
 }

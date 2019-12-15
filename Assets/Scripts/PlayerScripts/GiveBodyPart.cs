@@ -12,6 +12,7 @@ public class GiveBodyPart : MonoBehaviour
     // must be set per level
     public int Count;
 
+
     private List<Transform> hands = new List<Transform>();
     private List<Transform> legs = new List<Transform>();
     private ObjectSlot slot;
@@ -47,7 +48,6 @@ public class GiveBodyPart : MonoBehaviour
                         if (trans.tag == "Leg")
                         {
                             legs.Add(trans);
-
                         }
                     }
 

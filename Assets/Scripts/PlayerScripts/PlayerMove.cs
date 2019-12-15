@@ -6,16 +6,22 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
 
-    public enum PlayerCharacters 
-    { 
+    public enum PlayerCharacters
+    {
         Robot,
         Animal
+
     }
 
-    //The type of the character
-    //[SerializeField]
-    // private PlayerCharacters _character;
+    public enum Direction
+    {
+        left,
+        right
+    }
+    
     public PlayerCharacters character;
+    public Direction direction = Direction.right;
+
 
     public float MoveSpeed;
     public float JumpSpeed;
@@ -25,8 +31,10 @@ public class PlayerMove : MonoBehaviour
     private Vector3 moveVector;
     private Rigidbody2D rb;
 
+    private SpriteRenderer renderer;
+
     //Use can move for things like pause, checking if it has legs etc.
-    public bool CanMove;
+    public bool CanJump;
     private bool touchingGround = true;
 
     public LayerMask Ground;
@@ -43,6 +51,7 @@ public class PlayerMove : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        renderer = GetComponent<SpriteRenderer>();
         
         jumpGravity = -(2 * JumpHeight) / Mathf.Pow(TimeToJumpHeight, 2);
         jumpVelocity = Mathf.Abs(jumpGravity) * TimeToJumpHeight;
@@ -51,10 +60,6 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-        if (!CanMove)
-            return;
-
         // Step update
         stepMovement = (rb.velocity + Vector2.up * Physics2D.gravity.y * Time.deltaTime * 0.5f) * Time.deltaTime;
         transform.Translate(stepMovement);
@@ -69,19 +74,27 @@ public class PlayerMove : MonoBehaviour
 
                 //Move the robot to the left
                 moveVector = Vector3.left;
+                renderer.flipX = true;
+                direction = Direction.left;
+
 
             }
             else if (Input.GetKey(KeyCode.D))
             {
                 //Move the robot to the right
                 moveVector = Vector3.right;
+                renderer.flipX = false;
+                direction = Direction.right;
             }
 
-            if (Input.GetKeyDown(KeyCode.W) && touchingGround)
+            if (CanJump)
             { 
-                // When jump button pressed,
-                rb.velocity = new Vector2(0, jumpVelocity);
+                if (Input.GetKeyDown(KeyCode.W) && touchingGround)
+                {
+                    // When jump button pressed,
+                    rb.velocity = new Vector2(0, jumpVelocity);
 
+                }
             }
         }
 
@@ -93,20 +106,25 @@ public class PlayerMove : MonoBehaviour
             {
                 //Move the animal to the left
                 moveVector = Vector3.left;
+                renderer.flipX = false;
             }
 
             else if (Input.GetKey(KeyCode.RightArrow))
             {
                 //Move the animal to the right
                 moveVector = Vector3.right;
+                renderer.flipX = true;
 
             }
 
-            if (Input.GetKeyDown(KeyCode.UpArrow) && touchingGround)
-            { 
-                // When jump button pressed,
-                rb.velocity = new Vector2(0, jumpVelocity);
+            if (CanJump)
+            {
+                if (Input.GetKeyDown(KeyCode.UpArrow) && touchingGround)
+                {
+                    // When jump button pressed,
+                    rb.velocity = new Vector2(0, jumpVelocity);
 
+                }
             }
 
         }
