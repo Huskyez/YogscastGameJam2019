@@ -12,8 +12,13 @@ public class PlayerClimb : MonoBehaviour
     private Rigidbody2D rb;
     private PlayerMove moveScript;
 
+    [SerializeField]
+    private bool inRange = false;
+
     private bool onLadder = false;
-    
+
+
+    private float delay = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,44 +34,94 @@ public class PlayerClimb : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (onLadder)
+        if (inRange)
         {
-
-            if(slot.NrHands > 0)
+            if (slot.NrHands > 0)
             {
-                if (Input.GetKey(KeyCode.A))
+                if (moveScript.character == PlayerMove.PlayerCharacters.Animal)
                 {
-                    transform.Translate((Vector3.left + Vector3.up) * climbSpeed * Time.deltaTime);
-                }
+                    if (!onLadder)
+                    {
+                        if (Input.GetKeyDown(KeyCode.LeftArrow))
+                        {
+                            transform.position += Vector3.left;
+                        }
+                        if (Input.GetKeyDown(KeyCode.RightArrow))
+                        {
+                            transform.position += Vector3.right;
+                            // transform.Translate(Vector3.right * 4.5f * climbSpeed * Time.deltaTime);
+                        }
+                    }
+                    else
+                    {
+                        if (Input.GetKey(KeyCode.LeftArrow))
+                            transform.Translate((Vector3.down) * climbSpeed * Time.deltaTime);
+                        if (Input.GetKey(KeyCode.RightArrow))
+                            transform.Translate((Vector3.up) * climbSpeed * Time.deltaTime);
+                    }
 
-                if (Input.GetKey(KeyCode.D))
-                {
-                    transform.Translate((Vector3.right + Vector3.up) * climbSpeed * Time.deltaTime);
+                    
                 }
-            }
+                else
+                {
+                    if (!onLadder)
+                    {
+                        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S)) && delay < 0.0f)
+                        {
+                            transform.position += Vector3.left;
+                            delay = 0.5f;
+                        }
+                        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W)) && delay < 0.0f)
+                        { 
+                            transform.position += Vector3.right;
+                            delay = 0.5f;
+                            // transform.Translate(Vector3.right * 4.5f * climbSpeed * Time.deltaTime);
+                        }
+                    }
+                    else
+                    {
+                        if (Input.GetKey(KeyCode.S))
+                            transform.Translate((Vector3.down) * climbSpeed * Time.deltaTime);
+                        if (Input.GetKey(KeyCode.W))
+                            transform.Translate((Vector3.up) * climbSpeed * Time.deltaTime);
+                    }
+                }
+            }   
                 
         }
+
+        delay -= Time.deltaTime;
+
+        if (!onLadder)
+            inRange = Physics2D.Raycast(rb.position, Vector3.right, 1.1f, LayerMask.GetMask("Ladder")) || Physics2D.OverlapCircle(rb.position, 0.6f, LayerMask.GetMask("Ladder"));
+        
+        if (inRange)
+        {
+            moveScript.CanMove = false;
+            rb.gravityScale = 0;
+        }
+        else
+        {
+            moveScript.CanMove = true;
+            rb.gravityScale = 1;
+        }
+
+        
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Enters trigger");
-        if(collision.tag == "Ladder")
+        if (collision.CompareTag("Ladder"))
         {
-            moveScript.CanMove = false;
-            rb.gravityScale = 0;
             onLadder = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.tag == "Ladder")
+        if (collision.CompareTag("Ladder"))
         {
-
-            moveScript.CanMove = true;
-            rb.gravityScale = 1;
             onLadder = false;
         }
     }

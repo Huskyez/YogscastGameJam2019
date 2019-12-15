@@ -166,7 +166,7 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 256
-  JumpHeight: 20
+  JumpHeight: 12
   TimeToJumpHeight: 5
 --- !u!114 &750346689637547735
 MonoBehaviour:

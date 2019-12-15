@@ -43,7 +43,7 @@ public class PickUpAndDeploy : MonoBehaviour
             {
                 Debug.Log("Dropped");
                 animal.transform.parent = null;
-                animal.transform.position = transform.position + Vector3.right;
+                animal.transform.position = transform.position + Vector3.right + Vector3.down * 0.5f;
                 animal.GetComponent<Rigidbody2D>().gravityScale = 1;
                 animal.GetComponent<Collider2D>().enabled = true;
                 hasAnimal = false;

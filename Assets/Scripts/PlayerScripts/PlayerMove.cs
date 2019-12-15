@@ -111,7 +111,7 @@ public class PlayerMove : MonoBehaviour
 
         }
 
-        touchingGround = Physics2D.OverlapCircle(rb.position, checkRadius, Ground);
+        touchingGround = Physics2D.Raycast(rb.position, Vector2.down, 1.0f, Ground);
 
         transform.Translate(moveVector * MoveSpeed * Time.deltaTime);
         moveVector = Vector3.zero;
