@@ -65,7 +65,7 @@ public class PickUpAndDeploy : MonoBehaviour
         }
 
         if (!hasAnimal)
-            canPickUp = Physics2D.OverlapCircle(gameObject.GetComponent<Rigidbody2D>().position, 1.5f, LayerMask.GetMask("Animal"));
+            canPickUp = Physics2D.OverlapCircle(gameObject.GetComponent<Rigidbody2D>().position, 1.0f, LayerMask.GetMask("Animal"));
 
     }
 

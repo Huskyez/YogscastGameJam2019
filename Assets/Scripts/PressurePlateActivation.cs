@@ -9,29 +9,18 @@ public class PressurePlateActivation : MonoBehaviour
     [SerializeField] private bool activeObjects = true;
     public GameObject[] ToActivate;
 
-<<<<<<< HEAD
     [SerializeField] private Sprite pressedSprite;
     private Sprite unpressedSprite;
+
+    private GameObject onPressurePlate;
 
     // This should be set only if 2 pressure plates change the same blocks
     public GameObject linkedPressurePlate;
-=======
-
-    [SerializeField] private Sprite pressedSprite;
-    private Sprite unpressedSprite;
-
->>>>>>> forkyVersion
 
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< HEAD
         unpressedSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
-=======
-
-        unpressedSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
-
->>>>>>> forkyVersion
         IsActivated = false;
         Activate();
     }
@@ -39,7 +28,6 @@ public class PressurePlateActivation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
         if (IsActivated && activeObjects)
         {
             Deactivate();
@@ -54,24 +42,6 @@ public class PressurePlateActivation : MonoBehaviour
             }
             Activate();
             activeObjects = true;
-=======
-        if (IsActivated && !activeObjects)
-        {
-            Activate();
-            activeObjects = true;
-
-            gameObject.GetComponent<SpriteRenderer>().sprite = pressedSprite;
-            
-
-        }
-        else if (!IsActivated && activeObjects)
-        {
-            Deactivate();
-            activeObjects = false;
-
-            gameObject.GetComponent<SpriteRenderer>().sprite = unpressedSprite;
-
->>>>>>> forkyVersion
         }
 
     }
@@ -83,6 +53,9 @@ public class PressurePlateActivation : MonoBehaviour
             Debug.Log("Pressure Plate Activated");
             IsActivated = true;
             gameObject.GetComponent<SpriteRenderer>().sprite = pressedSprite;
+            
+            if (onPressurePlate == null)
+                onPressurePlate = collision.gameObject;
         }
     }
 
@@ -90,9 +63,13 @@ public class PressurePlateActivation : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Animal") || collision.gameObject.CompareTag("Robot"))
         {
-            Debug.Log("Pressure Plate Deactivated");
-            IsActivated = false;
-            gameObject.GetComponent<SpriteRenderer>().sprite = unpressedSprite;
+            if (onPressurePlate == collision.gameObject)
+            {
+                Debug.Log("Pressure Plate Deactivated");
+                IsActivated = false;
+                gameObject.GetComponent<SpriteRenderer>().sprite = unpressedSprite;
+                onPressurePlate = null;
+            }
         }
     }
 
