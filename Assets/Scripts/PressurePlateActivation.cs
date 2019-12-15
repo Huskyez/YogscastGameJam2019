@@ -9,10 +9,19 @@ public class PressurePlateActivation : MonoBehaviour
     private bool activeObjects = false;
     public GameObject[] ToActivate;
 
+<<<<<<< HEAD
+    [SerializeField] private Sprite pressedSprite;
+    private Sprite unpressedSprite;
+=======
+>>>>>>> ionutVersion
 
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
+        unpressedSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+=======
+>>>>>>> ionutVersion
         IsActivated = false;
         Deactivate();
     }
@@ -24,11 +33,20 @@ public class PressurePlateActivation : MonoBehaviour
         {
             Activate();
             activeObjects = true;
+<<<<<<< HEAD
+            gameObject.GetComponent<SpriteRenderer>().sprite = pressedSprite;
+            
+=======
+>>>>>>> ionutVersion
         }
         else if (!IsActivated && activeObjects)
         {
             Deactivate();
             activeObjects = false;
+<<<<<<< HEAD
+            gameObject.GetComponent<SpriteRenderer>().sprite = unpressedSprite;
+=======
+>>>>>>> ionutVersion
         }
 
     }

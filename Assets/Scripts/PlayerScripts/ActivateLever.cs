@@ -7,7 +7,8 @@ public class ActivateLever : MonoBehaviour
 
     private bool canPull = false;
     private GameObject lever;
-    
+    private float wait = 0.5f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +25,7 @@ public class ActivateLever : MonoBehaviour
             {
                 if (lever != null)
                 {
-                    //TODO: lever activate
-                    Debug.Log("Lever Activated");
+                    Debug.Log("Lever Activated from: " + gameObject.name);
                     bool isActivated = lever.GetComponent<LeverActivation>().IsActivated;
                     lever.GetComponent<LeverActivation>().IsActivated = !isActivated;
                 }
@@ -34,18 +34,19 @@ public class ActivateLever : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.CompareTag("Lever"))
+        if (collider.gameObject.CompareTag("Lever"))
         {
             canPull = true;
-            lever = collision.gameObject;
+            lever = collider.gameObject;
+
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collider)
     {
-        if (collision.gameObject.CompareTag("Lever"))
+        if (collider.gameObject.CompareTag("Lever"))
         {
             canPull = false;
             lever = null;
