@@ -330,6 +330,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6503296854017608260, guid: 0ef8a3615c4b74a419ad82492b5915e7,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f756e3a0b85255d44a35e22f9203e3de, type: 3}
+    - target: {fileID: 6503296854017608260, guid: 0ef8a3615c4b74a419ad82492b5915e7,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ef8a3615c4b74a419ad82492b5915e7, type: 3}
 --- !u!1001 &154459564
@@ -1522,6 +1532,101 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3567ff439254444297d6a82d431c12c, type: 3}
+--- !u!1001 &876536659
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[0]
+      value: "\"What is this? Please identify yourself lifeform\" Rover asked\r\nAt
+        the sight of Rover's metal body the dog moved and barked in confusion. The
+        dog couldn't move as his legs were hurt. Rover stood stone cold in front of
+        him. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[1]
+      value: "He read the tag on the dog's collar.\r\n\"How did you get here Charlie?
+        It seems that you can't communicate. Are you aware of that fact?\""
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[2]
+      value: As Rover wanted to leave, his prime directive kicked in, which was to
+        take care of all carbon based lifeforms. As such, Rover picked Charlie up
+        and went looking for his home.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.7589726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567660, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueTrigger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cda1fbf2c1f5f11489c4f83b9ba37113, type: 3}
 --- !u!1001 &985987456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1994,6 +2099,75 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1574955173}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1949146638
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835416, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 388b51614375921419dc132759a5fab7, type: 3}
 --- !u!1 &1985971411
 GameObject:
   m_ObjectHideFlags: 0

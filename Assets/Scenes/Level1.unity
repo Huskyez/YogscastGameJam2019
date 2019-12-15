@@ -425,7 +425,7 @@ Transform:
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &267271661
 PrefabInstance:
@@ -1670,6 +1670,75 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1124163751}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1209038857
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835416, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 388b51614375921419dc132759a5fab7, type: 3}
 --- !u!1001 &1334745890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1877,6 +1946,93 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 705c22f04a7771540ab70cca3bbaf18a, type: 3}
+--- !u!1001 &1448264396
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[0]
+      value: "\"It seems that we are a bit more deep in these mountains than I initially
+        calculated\" Rover concluded. \r\nCharlie barked happily.\r\n\"I can not understand
+        you Charlie. Let us proceed.\""
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[1]
+      value: "Charlie moved left and right on Rover's back, savouring the beautiful
+        view.\r\n\"What is so exciting about being lost?\""
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.7589726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567660, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueTrigger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cda1fbf2c1f5f11489c4f83b9ba37113, type: 3}
 --- !u!1 &1453677590
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,7 +2894,7 @@ Transform:
   - {fileID: 495996234}
   - {fileID: 1046273989}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1556473268
 PrefabInstance:
@@ -3126,6 +3282,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6503296854017608260, guid: 0ef8a3615c4b74a419ad82492b5915e7,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 224f6aa7d8008304d8c474dc4300dddc, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ef8a3615c4b74a419ad82492b5915e7, type: 3}
 --- !u!114 &1927325071 stripped
