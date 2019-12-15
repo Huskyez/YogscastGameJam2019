@@ -1,5 +1,14 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/MainScene.unity.meta
+guid: 2cda990e2423bbf4892e6590ba056729
+========
+guid: d2340b87e11de1748b33e7c5091faedf
+folderAsset: yes
+>>>>>>>> 177049cd67ebff885c5ad7336eeb8f5ed6c40963:Assets/CharacterPrefabs.meta
+=======
 guid: 046508cec5142fb4db5658b1a906b349
+>>>>>>> 177049cd67ebff885c5ad7336eeb8f5ed6c40963
 DefaultImporter:
   externalObjects: {}
   userData: 

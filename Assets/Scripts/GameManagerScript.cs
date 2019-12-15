@@ -39,6 +39,7 @@ public class GameManagerScript : MonoBehaviour
 
         if (IsAtExitRobot && IsAtExitAnimal)
         {
+<<<<<<< HEAD
             if (LevelToLoad == "Final")
             {
                 // TODO: add scripted shit
@@ -49,6 +50,11 @@ public class GameManagerScript : MonoBehaviour
                 SceneManager.LoadScene(LevelToLoad);
 
             }
+=======
+            Debug.Log("CHANGE LEVEL TO " + LevelToLoad);
+            SceneManager.LoadScene(LevelToLoad);           
+
+>>>>>>> forkyVersion
         }
 
         if (!isPaused)
@@ -60,6 +66,10 @@ public class GameManagerScript : MonoBehaviour
                 PauseMenuInstance.SetActive(true);
                 Time.timeScale = 0;
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> forkyVersion
         }
     }
 
@@ -76,6 +86,10 @@ public class GameManagerScript : MonoBehaviour
         Application.Quit();
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> forkyVersion
     public void Resume()
     {
         Time.timeScale = 1;
@@ -85,8 +99,13 @@ public class GameManagerScript : MonoBehaviour
 
     public void ReloadGame()
     {
+<<<<<<< HEAD
         Time.timeScale = 1;
+=======
+
+>>>>>>> forkyVersion
         Debug.Log(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

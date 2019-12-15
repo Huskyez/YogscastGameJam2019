@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scripts/PlayerScripts/PlayerClimb.cs.meta
+guid: 959b4b79959836f419ef2009573e8ee6
+=======
+guid: effef3cbcbe414c498e60a0bb9f07bb9
+>>>>>>> master:Assets/Scripts/Managers/AudioManager.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
