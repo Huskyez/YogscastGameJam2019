@@ -48,7 +48,7 @@ public class GameManagerScript : MonoBehaviour
         {
             Debug.Log("CHANGE LEVEL TO " + LevelToLoad);
             SceneManager.LoadScene(LevelToLoad);           
-<<<<<<< HEAD
+
         }
 
         if (!isPaused)
@@ -59,8 +59,7 @@ public class GameManagerScript : MonoBehaviour
                 PauseMenuInstance.SetActive(true);
                 Time.timeScale = 0;
             }
-=======
->>>>>>> ionutVersion
+
         }
     }
 
@@ -77,7 +76,7 @@ public class GameManagerScript : MonoBehaviour
         Application.Quit();
     }
 
-<<<<<<< HEAD
+
     public void Resume()
     {
         Time.timeScale = 1;
@@ -88,11 +87,9 @@ public class GameManagerScript : MonoBehaviour
     public void ReloadGame()
     {
         Time.timeScale = 1;
-=======
 
-    public void ReloadGame()
-    {
->>>>>>> ionutVersion
+    
+
         Debug.Log(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
