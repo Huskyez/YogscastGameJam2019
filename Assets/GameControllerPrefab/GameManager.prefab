@@ -43,4 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c8fa1f9a4a96f46ab2880b0a389c47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToLoad: 
+  LevelToLoad: Level2
+  PauseMenuInstance: {fileID: 0}

@@ -3,8 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: [Hand, Leg, Animal, AnimalExit, RobotExit, Animal, Robot, Lever, Lever, PauseMenu,
-    Lever, Lever, Lever, PauseMenu]
+  tags:
+  - Hand
+  - Leg
+  - Animal
+  - AnimalExit
+  - RobotExit
+  - Animal
+  - Robot
+  - Lever
+  - Lever
+  - PauseMenu
+  - Lever
+  - Lever
+  - Lever
+  - PauseMenu
+  - Ladder
   layers:
   - Default
   - TransparentFX

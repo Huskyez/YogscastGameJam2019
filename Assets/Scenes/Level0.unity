@@ -166,6 +166,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &24056208 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3844749095105042106, guid: 0ef8a3615c4b74a419ad82492b5915e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 90543620}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c8fa1f9a4a96f46ab2880b0a389c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &41374554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -327,6 +339,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1539040576732656064, guid: 59f4fdf20a838bd448881c73e0745994,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 24056208}
+    - target: {fileID: 1539040576732656064, guid: 59f4fdf20a838bd448881c73e0745994,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 1539040577219763522, guid: 59f4fdf20a838bd448881c73e0745994,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -436,6 +458,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539040578072449541, guid: 59f4fdf20a838bd448881c73e0745994,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 24056208}
+    - target: {fileID: 1539040578072449541, guid: 59f4fdf20a838bd448881c73e0745994,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539040578136849869, guid: 59f4fdf20a838bd448881c73e0745994,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 24056208}
+    - target: {fileID: 1539040578136849869, guid: 59f4fdf20a838bd448881c73e0745994,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReloadGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59f4fdf20a838bd448881c73e0745994, type: 3}
@@ -601,6 +643,7 @@ GameObject:
   - component: {fileID: 576707147}
   - component: {fileID: 576707146}
   - component: {fileID: 576707145}
+  - component: {fileID: 576707148}
   m_Layer: 0
   m_Name: Tilemap_Dangerous
   m_TagString: Untagged
@@ -632,7 +675,7 @@ TilemapCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1110,6 +1153,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &576707148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576707143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea99de337904e8942aad7ae27e827bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &606734782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,12 +2008,12 @@ PrefabInstance:
     - target: {fileID: 1817414376518306894, guid: a2f62c7868521f64c9452775acdfe5ba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.83
+      value: -8.93
       objectReference: {fileID: 0}
     - target: {fileID: 1817414376518306894, guid: a2f62c7868521f64c9452775acdfe5ba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.06
+      value: -1.64
       objectReference: {fileID: 0}
     - target: {fileID: 1817414376518306894, guid: a2f62c7868521f64c9452775acdfe5ba,
         type: 3}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1950342912961719067}
   - component: {fileID: 1950342912961719068}
   - component: {fileID: 1950342912961719069}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PressurePlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451d95d72d1091a43b16cbbbe698ff53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeObjects: 1
   ToActivate: []
   pressedSprite: {fileID: 1738377741183723119, guid: 745d577fbce08c94bb5851b1372a9e2a,
     type: 3}
+  linkedPressurePlate: {fileID: 0}

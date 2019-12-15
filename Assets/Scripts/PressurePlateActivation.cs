@@ -33,11 +33,13 @@ public class PressurePlateActivation : MonoBehaviour
         }
         else if (!IsActivated && !activeObjects)
         {
-            if (linkedPressurePlate.GetComponent<PressurePlateActivation>().IsActivated == false)
+            if (linkedPressurePlate != null)
             {
-                Activate();
-                activeObjects = true;
+                if (linkedPressurePlate.GetComponent<PressurePlateActivation>().IsActivated == true)
+                    return;
             }
+            Activate();
+            activeObjects = true;
         }
 
     }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3836342402463053079}
   - component: {fileID: 3836342402463053072}
   - component: {fileID: 3836342402463053073}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeverBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
