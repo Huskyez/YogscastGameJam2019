@@ -23,11 +23,13 @@ public class LeverActivation : MonoBehaviour
         {
             Activate();
             activeObjects = true;
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
         else if (!IsActivated && activeObjects)
         {
             Deactivate();
             activeObjects = false;
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         
     }
