@@ -27,7 +27,7 @@ public class GiveBodyPart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        canGive = Physics2D.OverlapCircle(gameObject.GetComponent<Rigidbody2D>().position, 1.5f, LayerMask.GetMask("Animal"));
         
         if (canGive)
         {
@@ -117,20 +117,19 @@ public class GiveBodyPart : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Animal")
-        {
-            
-            canGive = true;
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if(collision.gameObject.tag == "Animal")
+    //    {
+    //        canGive = true;
+    //    }
+    //}
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Animal")
-        {
-            canGive = false;
-        }
-    }
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    if(collision.gameObject.tag == "Animal")
+    //    {
+    //        canGive = false;
+    //    }
+    //}
 }

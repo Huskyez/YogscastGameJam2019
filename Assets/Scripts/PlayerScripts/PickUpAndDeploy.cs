@@ -41,6 +41,7 @@ public class PickUpAndDeploy : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.R))
             {
+                Debug.Log("Dropped");
                 animal.transform.parent = null;
                 animal.transform.position = transform.position + Vector3.right;
                 animal.GetComponent<Rigidbody2D>().gravityScale = 1;
@@ -53,6 +54,7 @@ public class PickUpAndDeploy : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
+                Debug.Log("Picked Up");
                 animal.transform.parent = gameObject.transform;
                 animal.transform.position = transform.position + Vector3.up + Vector3.left;
                 animal.GetComponent<Rigidbody2D>().gravityScale = 0;
@@ -62,21 +64,24 @@ public class PickUpAndDeploy : MonoBehaviour
             }
         }
 
+        if (!hasAnimal)
+            canPickUp = Physics2D.OverlapCircle(gameObject.GetComponent<Rigidbody2D>().position, 1.5f, LayerMask.GetMask("Animal"));
+
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.tag == "Animal")
-        {
-            canPickUp = true;
-        }
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.transform.tag == "Animal")
-        {
-            canPickUp = false;
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.transform.tag == "Animal")
+    //    {
+    //        canPickUp = true;
+    //    }
+    //}
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    if (collision.transform.tag == "Animal")
+    //    {
+    //        canPickUp = false;
+    //    }
+    //}
 }

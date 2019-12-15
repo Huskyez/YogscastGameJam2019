@@ -36,10 +36,7 @@ public class PlayerClimb : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.A))
                 {
-
                     transform.Translate((Vector3.left + Vector3.up) * climbSpeed * Time.deltaTime);
-
-
                 }
 
                 if (Input.GetKey(KeyCode.D))

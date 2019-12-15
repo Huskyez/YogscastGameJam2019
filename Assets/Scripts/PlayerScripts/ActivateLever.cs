@@ -7,7 +7,6 @@ public class ActivateLever : MonoBehaviour
 
     private bool canPull = false;
     private GameObject lever;
-    private float wait = 0.5f;
 
 
     // Start is called before the first frame update
