@@ -15,6 +15,10 @@ public class GameManagerScript : MonoBehaviour
     private GameObject animal;
     private GameObject robot;
 
+    //public GameObject PauseMenu;
+    public GameObject PauseMenuInstance;
+    private bool isPaused = false;
+
     public bool IsAtExitAnimal { set; get; }
     public bool IsAtExitRobot { set; get; }
 
@@ -23,6 +27,15 @@ public class GameManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        //PauseMenuInstance = GameObject.FindGameObjectWithTag("PauseMenu");
+
+        if (PauseMenuInstance == null)
+        {
+            Debug.LogError("Pause Menu is NULL");
+        }
+        PauseMenuInstance.SetActive(false);
+
         //animal = GameObject.FindGameObjectWithTag("Animal");
         //robot = GameObject.FindGameObjectWithTag("Robot");
     }
@@ -30,13 +43,57 @@ public class GameManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (IsAtExitRobot && IsAtExitAnimal)
         {
-            //SceneManager.LoadScene(LevelToLoad);
-            
-            //TODO: Change Level 
-            Debug.Log("CHANGE LEVEL");
-
+            Debug.Log("CHANGE LEVEL TO " + LevelToLoad);
+            SceneManager.LoadScene(LevelToLoad);           
+<<<<<<< HEAD
         }
+
+        if (!isPaused)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                isPaused = true;
+                PauseMenuInstance.SetActive(true);
+                Time.timeScale = 0;
+            }
+=======
+>>>>>>> ionutVersion
+        }
+    }
+
+
+    // ------------------------------ UI CONTROLLER ----------------------------------------------------------------------------------------
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(LevelToLoad);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+<<<<<<< HEAD
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        isPaused = false;
+        PauseMenuInstance.SetActive(false);
+    }
+
+    public void ReloadGame()
+    {
+        Time.timeScale = 1;
+=======
+
+    public void ReloadGame()
+    {
+>>>>>>> ionutVersion
+        Debug.Log(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
