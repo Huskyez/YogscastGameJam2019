@@ -12,6 +12,9 @@ public class PressurePlateActivation : MonoBehaviour
     [SerializeField] private Sprite pressedSprite;
     private Sprite unpressedSprite;
 
+    // This should be set only if 2 pressure plates change the same blocks
+    public GameObject linkedPressurePlate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +26,6 @@ public class PressurePlateActivation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        checkActivatedObjects();
-
         if (IsActivated && activeObjects)
         {
             Deactivate();
@@ -33,8 +33,11 @@ public class PressurePlateActivation : MonoBehaviour
         }
         else if (!IsActivated && !activeObjects)
         {
-            Activate();
-            activeObjects = true;
+            if (linkedPressurePlate.GetComponent<PressurePlateActivation>().IsActivated == false)
+            {
+                Activate();
+                activeObjects = true;
+            }
         }
 
     }
@@ -57,12 +60,6 @@ public class PressurePlateActivation : MonoBehaviour
             IsActivated = false;
             gameObject.GetComponent<SpriteRenderer>().sprite = unpressedSprite;
         }
-    }
-
-
-    private void checkActivatedObjects()
-    {
-        activeObjects = ToActivate[0].activeSelf;
     }
 
     private void Activate()

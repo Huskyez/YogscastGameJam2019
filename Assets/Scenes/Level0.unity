@@ -445,6 +445,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 154459564}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &239290472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1950342912961719070, guid: 3b7fbea743cf9f840b4382d79f436827,
+    type: 3}
+  m_PrefabInstance: {fileID: 1996136861}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &297302980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1856,6 +1862,11 @@ PrefabInstance:
       propertyPath: ToActivate.Array.data[2]
       value: 
       objectReference: {fileID: 985987457}
+    - target: {fileID: 1950342912961719069, guid: 3b7fbea743cf9f840b4382d79f436827,
+        type: 3}
+      propertyPath: linkedPressurePlate
+      value: 
+      objectReference: {fileID: 239290472}
     - target: {fileID: 1950342912961719070, guid: 3b7fbea743cf9f840b4382d79f436827,
         type: 3}
       propertyPath: m_Name
@@ -1942,12 +1953,12 @@ PrefabInstance:
     - target: {fileID: 1817414376518306894, guid: a2f62c7868521f64c9452775acdfe5ba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.85
+      value: -8.83
       objectReference: {fileID: 0}
     - target: {fileID: 1817414376518306894, guid: a2f62c7868521f64c9452775acdfe5ba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03
+      value: -2.06
       objectReference: {fileID: 0}
     - target: {fileID: 1817414376518306894, guid: a2f62c7868521f64c9452775acdfe5ba,
         type: 3}
@@ -2006,6 +2017,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1817414376518306894, guid: a2f62c7868521f64c9452775acdfe5ba,
     type: 3}
   m_PrefabInstance: {fileID: 1877713442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1917590061 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1950342912961719070, guid: 3b7fbea743cf9f840b4382d79f436827,
+    type: 3}
+  m_PrefabInstance: {fileID: 1574955173}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1985971411
 GameObject:
@@ -2858,6 +2875,11 @@ PrefabInstance:
       propertyPath: ToActivate.Array.data[2]
       value: 
       objectReference: {fileID: 985987457}
+    - target: {fileID: 1950342912961719069, guid: 3b7fbea743cf9f840b4382d79f436827,
+        type: 3}
+      propertyPath: linkedPressurePlate
+      value: 
+      objectReference: {fileID: 1917590061}
     - target: {fileID: 1950342912961719070, guid: 3b7fbea743cf9f840b4382d79f436827,
         type: 3}
       propertyPath: m_Name
