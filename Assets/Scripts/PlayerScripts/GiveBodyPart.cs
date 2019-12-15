@@ -8,6 +8,10 @@ public class GiveBodyPart : MonoBehaviour
 
     private bool canGive = false;
 
+    // How many parts can be given
+    // must be set per level
+    public int Count;
+
     private List<Transform> hands = new List<Transform>();
     private List<Transform> legs = new List<Transform>();
     private ObjectSlot slot;
@@ -18,7 +22,7 @@ public class GiveBodyPart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        slot = this.GetComponent<ObjectSlot>();
+        slot = GetComponent<ObjectSlot>();
 
         animal = GameObject.FindGameObjectWithTag("Animal").transform;
 
@@ -29,7 +33,7 @@ public class GiveBodyPart : MonoBehaviour
     {
         canGive = Physics2D.OverlapCircle(gameObject.GetComponent<Rigidbody2D>().position, 1.5f, LayerMask.GetMask("Animal"));
         
-        if (canGive)
+        if (canGive && Count > 0)
         {
             //Give leg
             if (Input.GetKeyDown(KeyCode.G))
@@ -66,10 +70,9 @@ public class GiveBodyPart : MonoBehaviour
                             animalHeldObjects[0] = legs[0];
                         }
                         slot.heldObjects.Remove(legs[0]);
-                        
+                        Debug.Log("Leg given");
+                        Count--;
                     }
-                    
-                    
                 }
 
             }
@@ -107,29 +110,13 @@ public class GiveBodyPart : MonoBehaviour
                             animalHeldObjects[0] = hands[0];
                         }
                         slot.heldObjects.Remove(hands[0]);
+                        Debug.Log("Hand given");
+                        Count--;
                     }
-                    
-
                 }
 
             }
         }
 
     }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if(collision.gameObject.tag == "Animal")
-    //    {
-    //        canGive = true;
-    //    }
-    //}
-
-    //private void OnCollisionExit2D(Collision2D collision)
-    //{
-    //    if(collision.gameObject.tag == "Animal")
-    //    {
-    //        canGive = false;
-    //    }
-    //}
 }
