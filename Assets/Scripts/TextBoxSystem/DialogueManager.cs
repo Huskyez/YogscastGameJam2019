@@ -6,12 +6,14 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+    public GameObject canvas;
     public TextMeshProUGUI textbox;
 
     private Queue<string> dialogue;
 
     private void Start()
     {
+        
         dialogue = new Queue<string>();
     }
 
@@ -23,7 +25,7 @@ public class DialogueManager : MonoBehaviour
         {
             dialogue.Enqueue(sentence);
         }
-
+        canvas.SetActive(true);
         DisplayNextSentence();
     }
 
@@ -42,6 +44,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        canvas.SetActive(false);
 
     }
 
