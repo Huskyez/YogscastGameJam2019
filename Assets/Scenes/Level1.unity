@@ -3193,6 +3193,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5443121389591075976, guid: a2f62c7868521f64c9452775acdfe5ba,
+        type: 3}
+      propertyPath: Count
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5443121389591075980, guid: a2f62c7868521f64c9452775acdfe5ba,
         type: 3}
       propertyPath: m_Offset.x
@@ -3272,6 +3277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Robot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443121389591076023, guid: a2f62c7868521f64c9452775acdfe5ba,
+        type: 3}
+      propertyPath: JumpHeight
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2f62c7868521f64c9452775acdfe5ba, type: 3}

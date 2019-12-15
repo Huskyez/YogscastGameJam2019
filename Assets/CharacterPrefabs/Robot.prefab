@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0e766a98ad4624588c59f3768b6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Count: 0
 --- !u!114 &5443121389591076023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +181,7 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 256
-  JumpHeight: 12
+  JumpHeight: 14
   TimeToJumpHeight: 5
 --- !u!114 &5443121389591075968
 MonoBehaviour:
@@ -207,3 +208,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   climbSpeed: 5
+  inRange: 0

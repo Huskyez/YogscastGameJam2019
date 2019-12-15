@@ -22,22 +22,15 @@ public class GameManagerScript : MonoBehaviour
     public bool IsAtExitAnimal { set; get; }
     public bool IsAtExitRobot { set; get; }
 
-    //public float CheckCollisionDistance;
-
     // Start is called before the first frame update
     void Start()
-    {
-
-        //PauseMenuInstance = GameObject.FindGameObjectWithTag("PauseMenu");
+    { 
 
         if (PauseMenuInstance == null)
         {
             Debug.LogError("Pause Menu is NULL");
         }
         PauseMenuInstance.SetActive(false);
-
-        //animal = GameObject.FindGameObjectWithTag("Animal");
-        //robot = GameObject.FindGameObjectWithTag("Robot");
     }
 
     // Update is called once per frame
@@ -46,14 +39,23 @@ public class GameManagerScript : MonoBehaviour
 
         if (IsAtExitRobot && IsAtExitAnimal)
         {
-            Debug.Log("CHANGE LEVEL TO " + LevelToLoad);
-            SceneManager.LoadScene(LevelToLoad);           
+            if (LevelToLoad == "Final")
+            {
+                // TODO: add scripted shit
+            }
+            else
+            {
+                Debug.Log("CHANGE LEVEL TO " + LevelToLoad);
+                SceneManager.LoadScene(LevelToLoad);
+
+            }
         }
 
         if (!isPaused)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                Debug.Log("PAUSE");
                 isPaused = true;
                 PauseMenuInstance.SetActive(true);
                 Time.timeScale = 0;

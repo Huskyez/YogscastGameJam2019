@@ -117,10 +117,10 @@ public class PlayerMove : MonoBehaviour
         moveVector = Vector3.zero;
 
         // Code for faster falling
-        if (rb.velocity.y < 0.0f)
-        {
-            rb.velocity += Vector2.up * FallSpeed * Time.deltaTime * Physics2D.gravity.y;
-        }
+        //if (rb.velocity.y < 0.0f)
+        //{
+        //    rb.velocity += Vector2.up * FallSpeed * Time.deltaTime * Physics2D.gravity.y;
+        //}
 
     }
 }

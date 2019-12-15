@@ -166,7 +166,7 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 256
-  JumpHeight: 12
+  JumpHeight: 14
   TimeToJumpHeight: 5
 --- !u!114 &750346689637547735
 MonoBehaviour:
@@ -181,3 +181,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   climbSpeed: 5
+  inRange: 0
