@@ -3435,6 +3435,11 @@ PrefabInstance:
       propertyPath: PauseMenuInstance
       value: 
       objectReference: {fileID: 38787547}
+    - target: {fileID: 3844749095105042106, guid: 0ef8a3615c4b74a419ad82492b5915e7,
+        type: 3}
+      propertyPath: LevelToLoad
+      value: Level3
+      objectReference: {fileID: 0}
     - target: {fileID: 3844749095105042107, guid: 0ef8a3615c4b74a419ad82492b5915e7,
         type: 3}
       propertyPath: m_LocalPosition.x

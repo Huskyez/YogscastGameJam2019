@@ -19,8 +19,6 @@ public class PlayerClimb : MonoBehaviour
     private bool onLadder = false;
 
 
-    private float delay = 0.5f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -31,94 +29,57 @@ public class PlayerClimb : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (slot.NrLegs == 0)
-        {
-            if (inRange)
-            {
-                if (slot.NrHands > 0)
-                {
-                    if (moveScript.character == PlayerMove.PlayerCharacters.Animal)
-                    {
-                        if (!onLadder)
-                        {
-                            if (Input.GetKeyDown(KeyCode.LeftArrow))
-                            {
-                                transform.position += Vector3.left * 0.5f;
-                            }
-                            if (Input.GetKeyDown(KeyCode.RightArrow))
-                            {
-                                transform.position += Vector3.right * 0.5f;
-                            }
-                        }
-                        else
-                        {
-                            if (Input.GetKey(KeyCode.DownArrow))
-                                transform.Translate((Vector3.down) * climbSpeed * Time.deltaTime);
-                            if (Input.GetKey(KeyCode.UpArrow))
-                                transform.Translate((Vector3.up) * climbSpeed * Time.deltaTime);
-                        }
-
-
-                    }
-                    else
-                    {
-                        if (!onLadder)
-                        {
-                            if (Input.GetKeyDown(KeyCode.A))
-                            {
-                                transform.position += Vector3.left * 0.5f;
-                            }
-                            if (Input.GetKeyDown(KeyCode.D))
-                            {
-                                transform.position += Vector3.right * 0.5f;
-                                // transform.Translate(Vector3.right * 4.5f * climbSpeed * Time.deltaTime);
-                            }
-                        }
-                        else
-                        {
-                            if (Input.GetKey(KeyCode.S))
-                                transform.Translate(Vector3.down * climbSpeed * Time.deltaTime);
-                            if (Input.GetKey(KeyCode.W))
-                                transform.Translate(Vector3.up * climbSpeed * Time.deltaTime);
-                        }
-                    }
-                }
-            }   
-        }
-        else 
-        {
-            if (slot.NrHands > 0)
-                if (onLadder)
-                {
-                    if (Input.GetKey(KeyCode.S))
-                        transform.Translate(Vector3.down * climbSpeed * Time.deltaTime);
-                    if (Input.GetKey(KeyCode.W))
-                        transform.Translate(Vector3.up * climbSpeed * Time.deltaTime);
-                }
-        }
-
-        delay -= Time.deltaTime;
-
-            inRange = Physics2D.Raycast(rb.position, Vector3.right, 1.0f, LayerMask.GetMask("Ladder"))
-                    || Physics2D.OverlapCircle(rb.position, 0.6f, LayerMask.GetMask("Ladder"))
-                    || Physics2D.Raycast(rb.position, Vector3.left, 1.0f, LayerMask.GetMask("Ladder"));
-
-
-        if (inRange)
-        {
-            moveScript.CanJump = false;
-            rb.gravityScale = 0;
-        }
-        else
-        {
-            moveScript.CanJump = true;
-            rb.gravityScale = 1;
-        }
-
         
 
+        if (onLadder && slot.NrHands > 0)
+        {
+            rb.velocity = Vector2.zero;
+            
+            if (moveScript.character == PlayerMove.PlayerCharacters.Animal)
+            {
+                if (Input.GetKey(KeyCode.DownArrow))
+                    rb.velocity = Vector2.down * climbSpeed;
+                if (Input.GetKey(KeyCode.UpArrow))
+                    rb.velocity = Vector2.up * climbSpeed;
+
+                if (slot.NrLegs == 0)
+                {
+                    if (Input.GetKey(KeyCode.LeftArrow))
+                    {
+                        rb.velocity = Vector2.left * climbSpeed;
+                        gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    if (Input.GetKey(KeyCode.RightArrow))
+                    {
+                        rb.velocity = Vector2.right * climbSpeed;
+                        gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                }
+            }
+            else
+            {
+                if (Input.GetKey(KeyCode.S))
+                    rb.velocity = Vector2.down * climbSpeed;
+                if (Input.GetKey(KeyCode.W))
+                    rb.velocity = Vector2.up * climbSpeed;
+
+                if (slot.NrLegs == 0)
+                {
+                    if (Input.GetKey(KeyCode.A))
+                    {
+                        rb.velocity = Vector2.left * climbSpeed;
+                        gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                    if (Input.GetKey(KeyCode.D))
+                    {
+                        rb.velocity = Vector2.right * climbSpeed;
+                        gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                }
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -126,6 +87,8 @@ public class PlayerClimb : MonoBehaviour
         if (collision.CompareTag("Ladder"))
         {
             onLadder = true;
+            moveScript.CanJump = false;
+            rb.gravityScale = 0;
         }
     }
 
@@ -134,6 +97,8 @@ public class PlayerClimb : MonoBehaviour
         if (collision.CompareTag("Ladder"))
         {
             onLadder = false;
+            moveScript.CanJump = true;
+            rb.gravityScale = 1;
         }
     }
 

@@ -60,3 +60,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Props
+    uniqueID: 1933816695
+    locked: 0
+  - name: Player
+    uniqueID: 909949617
+    locked: 0
