@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6705608440551073942}
   - component: {fileID: 6535739121696195358}
-  m_Layer: 31
+  m_Layer: 8
   m_Name: GroundTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 1771077878728936013}
   - component: {fileID: 4431688467734150639}
   - component: {fileID: 6043578789937336439}
-  m_Layer: 31
+  m_Layer: 8
   m_Name: Layer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

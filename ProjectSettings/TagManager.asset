@@ -3,6 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - Hand
   - Leg
@@ -12,6 +13,9 @@ TagManager:
   - Animal
   - Robot
   - Ladder
+=======
+  tags: [Hand, Leg, Animal, AnimalExit, RobotExit, Animal, Robot, Lever, Lever, PauseMenu]
+>>>>>>> master
   layers:
   - Default
   - TransparentFX
@@ -46,6 +50,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3166471009
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

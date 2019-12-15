@@ -54,7 +54,7 @@ public class GiveBodyPart : MonoBehaviour
                         
                         if (animalHeldObjects == null)
                         {
-                            Debug.Log("IS NULL");
+                            Debug.LogError("IS NULL");
                         }
 
                         if (animalHeldObjects.Count == 0)
@@ -82,7 +82,6 @@ public class GiveBodyPart : MonoBehaviour
                 {
                     foreach (Transform trans in slot.heldObjects)
                     {
-
                         if (trans.tag == "Hand")
                         {
                             hands.Add(trans);
@@ -92,9 +91,22 @@ public class GiveBodyPart : MonoBehaviour
                     if (hands != null)
                     {
                         hands[0].SetParent(animal);
-                        animal.GetComponent<ObjectSlot>().heldObjects[0] = hands[0];
+                        List<Transform> animalHeldObjects = animal.GetComponent<ObjectSlot>().heldObjects;
+
+                        if (animalHeldObjects == null)
+                        {
+                            Debug.LogError("IS NULL");
+                        }
+
+                        if (animalHeldObjects.Count == 0)
+                        {
+                            animalHeldObjects.Add(hands[0]);
+                        }
+                        else
+                        {
+                            animalHeldObjects[0] = hands[0];
+                        }
                         slot.heldObjects.Remove(hands[0]);
-                        
                     }
                     
 
