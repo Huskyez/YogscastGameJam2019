@@ -69,6 +69,7 @@ public class ObjectSlot : MonoBehaviour
         {
             moveScript.enabled = false;
         }
+<<<<<<< HEAD
 
         if (NrHands > 0)
         {
@@ -134,6 +135,8 @@ public class ObjectSlot : MonoBehaviour
         //    //Here comes the hand
 
         //}
+=======
+>>>>>>> forkyVersion
         
     }
 }
