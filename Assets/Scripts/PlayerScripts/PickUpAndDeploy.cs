@@ -37,7 +37,7 @@ public class PickUpAndDeploy : MonoBehaviour
     {
         if (hasAnimal)
         {
-            animal.transform.position = transform.position + Vector3.up + Vector3.left;
+            animal.transform.position = transform.position + (Vector3.up + Vector3.left) * 0.5f;
 
             if (Input.GetKeyDown(KeyCode.R))
             {

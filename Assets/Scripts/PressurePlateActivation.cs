@@ -6,57 +6,46 @@ public class PressurePlateActivation : MonoBehaviour
 {
 
     public bool IsActivated { get; set; }
-    private bool activeObjects = false;
+    [SerializeField] private bool activeObjects = true;
     public GameObject[] ToActivate;
 
-<<<<<<< HEAD
     [SerializeField] private Sprite pressedSprite;
     private Sprite unpressedSprite;
-=======
->>>>>>> ionutVersion
 
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< HEAD
         unpressedSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
-=======
->>>>>>> ionutVersion
         IsActivated = false;
-        Deactivate();
+        Activate();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IsActivated && !activeObjects)
-        {
-            Activate();
-            activeObjects = true;
-<<<<<<< HEAD
-            gameObject.GetComponent<SpriteRenderer>().sprite = pressedSprite;
-            
-=======
->>>>>>> ionutVersion
-        }
-        else if (!IsActivated && activeObjects)
+
+        checkActivatedObjects();
+
+        if (IsActivated && activeObjects)
         {
             Deactivate();
             activeObjects = false;
-<<<<<<< HEAD
-            gameObject.GetComponent<SpriteRenderer>().sprite = unpressedSprite;
-=======
->>>>>>> ionutVersion
+        }
+        else if (!IsActivated && !activeObjects)
+        {
+            Activate();
+            activeObjects = true;
         }
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Animal") || collision.gameObject.CompareTag("Robot"))
         {
             Debug.Log("Pressure Plate Activated");
             IsActivated = true;
+            gameObject.GetComponent<SpriteRenderer>().sprite = pressedSprite;
         }
     }
 
@@ -66,9 +55,15 @@ public class PressurePlateActivation : MonoBehaviour
         {
             Debug.Log("Pressure Plate Deactivated");
             IsActivated = false;
+            gameObject.GetComponent<SpriteRenderer>().sprite = unpressedSprite;
         }
     }
 
+
+    private void checkActivatedObjects()
+    {
+        activeObjects = ToActivate[0].activeSelf;
+    }
 
     private void Activate()
     {
