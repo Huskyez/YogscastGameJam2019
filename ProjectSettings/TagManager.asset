@@ -20,6 +20,7 @@ TagManager:
   - Lever
   - PauseMenu
   - Ladder
+  - PressurePlate
   layers:
   - Default
   - TransparentFX

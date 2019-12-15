@@ -34,7 +34,7 @@ public class PlayerMove : MonoBehaviour
     private SpriteRenderer renderer;
 
     //Use can move for things like pause, checking if it has legs etc.
-    public bool CanJump;
+    public bool CanJump = true;
     private bool touchingGround = true;
 
     public LayerMask Ground;
@@ -122,7 +122,7 @@ public class PlayerMove : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.UpArrow) && touchingGround)
                 {
                     // When jump button pressed,
-                    rb.velocity = new Vector2(0, jumpVelocity);
+                    rb.velocity = new Vector3(0, jumpVelocity, 0) + moveVector;
 
                 }
             }

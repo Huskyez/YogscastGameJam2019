@@ -267,7 +267,7 @@ Transform:
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &284421153
 PrefabInstance:
@@ -346,6 +346,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6503296854017608260, guid: 0ef8a3615c4b74a419ad82492b5915e7,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2407c59812132164c850d738cff56ce8, type: 3}
+    - target: {fileID: 6503296854017608260, guid: 0ef8a3615c4b74a419ad82492b5915e7,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504763924055166659, guid: 0ef8a3615c4b74a419ad82492b5915e7,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3523c478766b4b74f92bbb679940ed8e, type: 3}
+    - target: {fileID: 6504763924055166659, guid: 0ef8a3615c4b74a419ad82492b5915e7,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ef8a3615c4b74a419ad82492b5915e7, type: 3}
 --- !u!114 &284421154 stripped
@@ -375,12 +395,12 @@ PrefabInstance:
     - target: {fileID: 2939936131295922957, guid: a2f62c7868521f64c9452775acdfe5ba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.84
+      value: -8.76
       objectReference: {fileID: 0}
     - target: {fileID: 2939936131295922957, guid: a2f62c7868521f64c9452775acdfe5ba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.86
+      value: -1.77
       objectReference: {fileID: 0}
     - target: {fileID: 2939936131295922957, guid: a2f62c7868521f64c9452775acdfe5ba,
         type: 3}
@@ -410,7 +430,7 @@ PrefabInstance:
     - target: {fileID: 2939936131295922957, guid: a2f62c7868521f64c9452775acdfe5ba,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2939936131295922957, guid: a2f62c7868521f64c9452775acdfe5ba,
         type: 3}
@@ -478,8 +498,349 @@ Transform:
   - {fileID: 1326037616}
   - {fileID: 1390118276}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1124178284
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1317449164326567650, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.7525997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567650, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.5051994
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567650, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.16696885
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567650, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.3339376
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[0]
+      value: "As Charlie was about to enter the door, a deep sting crept upon his
+        heart. The wall had reappeared in front of him, blocking his passage. His
+        eyes stared in disbelief at the blocks.\r\n\"It seems that I'm not heavy enough\"
+        he heard Rover mutter."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[1]
+      value: "\"The pressure plate won't stay down\"\r\nSilence took over the place.
+        Charlie's head fell down into the ground as his eyes tiredly closed."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[2]
+      value: '"Maybe..."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[3]
+      value: "\"Maybe I could short circuit my battery core to destroy the pressure
+        plate...\"\r\nHearing Rover's words, Charlie quickly jumped up. His paws trembling,
+        he tried barking at Rover, but only a faint little whimper came out of his
+        mouth."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[4]
+      value: '"No Charlie, you must go."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[5]
+      value: "Breaking out of his paralysis, Charlie began spasming and barking frantically.
+        His cries echoed through the open space, resonating in Rover's sensors. A
+        faint but profound murmur began developing in Rover's core. It did not grow,
+        but it did not fade away. All of this Rover could feel.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[6]
+      value: '"A most peculiar thing Charlie. Now that I have nothing left to give,
+        there is nothing left to blind me either. Were I able to do so where I am
+        going, I would miss you Charlie. Live for me Charlie. Enjoy for me. Love for
+        me..."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[7]
+      value: As Rover's voice distorted into a painful humming, Charlie heard an electric
+        discharge and saw the wall dissappear before his eyes. Charlie howled and
+        cried and scratched the ground in anger, but his surroundings remained silent.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[9]
+      value: '
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.7589726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567660, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_Name
+      value: FinaleTrigger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cda1fbf2c1f5f11489c4f83b9ba37113, type: 3}
+--- !u!1001 &1132070294
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1317449164326567650, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.1971099
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567650, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.6057802
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[0]
+      value: '"I am not able to get out of here together with you. Take this leg to
+        anyone in the city you find and lead them back to me. I will be waiting here.
+        I appreciate your help."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.7589726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567660, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueTrigger (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cda1fbf2c1f5f11489c4f83b9ba37113, type: 3}
+--- !u!1001 &1188682213
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5040971867859883668, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971867859883668, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971867859883668, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971867859883668, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835414, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040971868460835416, guid: 388b51614375921419dc132759a5fab7,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 388b51614375921419dc132759a5fab7, type: 3}
 --- !u!1001 &1199466729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1209,6 +1570,75 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1001 &1340051702
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 484578478911387822, guid: 705c22f04a7771540ab70cca3bbaf18a,
+        type: 3}
+      propertyPath: m_Name
+      value: AnimalExit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972901540457287853, guid: 705c22f04a7771540ab70cca3bbaf18a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972901540457287853, guid: 705c22f04a7771540ab70cca3bbaf18a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972901540457287853, guid: 705c22f04a7771540ab70cca3bbaf18a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972901540457287853, guid: 705c22f04a7771540ab70cca3bbaf18a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972901540457287853, guid: 705c22f04a7771540ab70cca3bbaf18a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972901540457287853, guid: 705c22f04a7771540ab70cca3bbaf18a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972901540457287853, guid: 705c22f04a7771540ab70cca3bbaf18a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972901540457287853, guid: 705c22f04a7771540ab70cca3bbaf18a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972901540457287853, guid: 705c22f04a7771540ab70cca3bbaf18a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972901540457287853, guid: 705c22f04a7771540ab70cca3bbaf18a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972901540457287853, guid: 705c22f04a7771540ab70cca3bbaf18a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 705c22f04a7771540ab70cca3bbaf18a, type: 3}
 --- !u!1 &1348791177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,6 +2097,93 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f19bae3c5ca69f943af844f7ac1496a3, type: 3}
+--- !u!1001 &1555970817
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[0]
+      value: "Struggling to balance on one leg, Rover turned back to Charlie:\r\n\"We
+        are almost out of here. How are you doing?\"\r\nCharlie licked Rover's damaged
+        shoulder and jumped back as the wires stung his tongue."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567651, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: dialogue.dialogue.Array.data[1]
+      value: "\"Amusing. Do you believe that that is helping me?\"\r\nCharlie looked
+        at Rover with big eyes.\r\n\"Perhaps it actually is...\""
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.7589726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567655, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317449164326567660, guid: cda1fbf2c1f5f11489c4f83b9ba37113,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueTrigger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cda1fbf2c1f5f11489c4f83b9ba37113, type: 3}
 --- !u!1001 &1728063632
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -73,7 +73,7 @@ public class PressurePlateActivation : MonoBehaviour
         }
     }
 
-    private void Activate()
+    public void Activate()
     {
         foreach (var obj in ToActivate)
         {
@@ -81,7 +81,7 @@ public class PressurePlateActivation : MonoBehaviour
         }
     }
 
-    private void Deactivate()
+    public void Deactivate()
     {
         foreach (var obj in ToActivate)
         {

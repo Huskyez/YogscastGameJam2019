@@ -142,7 +142,7 @@ MonoBehaviour:
   MoveSpeed: 5
   JumpSpeed: 5
   FallSpeed: 2
-  CanJump: 0
+  CanJump: 1
   Ground:
     serializedVersion: 2
     m_Bits: 256

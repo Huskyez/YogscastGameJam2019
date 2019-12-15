@@ -10,6 +10,8 @@ public class DialogueTrigger : MonoBehaviour
     private AudioSource firstAudioSrc;
     private AudioSource secondAudioSrc;
 
+    private float waitTime = -1.0f;
+
     private void Start()
     {
         gamemng = FindObjectOfType<GameManagerScript>();
@@ -17,6 +19,21 @@ public class DialogueTrigger : MonoBehaviour
         firstAudioSrc = gamemng.gameObject.GetComponents<AudioSource>()[0];
         secondAudioSrc = gamemng.GetComponents<AudioSource>()[1];
     }
+
+    private void Update()
+    {
+        if (waitTime == -1.0f)
+        {
+            return;    
+        }
+        waitTime -= Time.deltaTime;
+
+        if (waitTime < 0.0f)
+        {
+            GameObject.FindGameObjectWithTag("PressurePlate").GetComponent<PressurePlateActivation>().Deactivate();
+        }
+    }
+
     public void TriggerDialogue()
     {
 
@@ -27,16 +44,18 @@ public class DialogueTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
+
+
         if (collision.gameObject.CompareTag("Robot"))
         {
-            if(this.gameObject.name != "FinaleTrigger")
+            if(gameObject.name != "FinaleTrigger")
             {
                 TriggerDialogue();
             }
             
         }
         
-        if(this.gameObject.name == "FinaleTrigger")
+        if(gameObject.name == "FinaleTrigger")
         {
               
             if (gamemng.LevelToLoad == "Final")
@@ -51,14 +70,13 @@ public class DialogueTrigger : MonoBehaviour
                         //TriggerMusic
                         secondAudioSrc.Play();
                         firstAudioSrc.volume = 0.01f;
+                        GameObject.FindGameObjectWithTag("PressurePlate").GetComponent<PressurePlateActivation>().Activate();
+                        waitTime = 30.0f;
                     }
 
 
                 }
             }
         }
-        
-
-
     }
 }

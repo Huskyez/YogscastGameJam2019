@@ -24,13 +24,16 @@ public class GameManagerScript : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    { 
+    {
 
         if (PauseMenuInstance == null)
         {
             Debug.LogError("Pause Menu is NULL");
         }
-        PauseMenuInstance.SetActive(false);
+        else
+        {
+            PauseMenuInstance.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -41,7 +44,10 @@ public class GameManagerScript : MonoBehaviour
         {
             if (LevelToLoad == "Final")
             {
-                // TODO: add scripted shit
+                if (IsAtExitAnimal)
+                {
+                    SceneManager.LoadScene("MainMenu");
+                }
             }
             else
             {
@@ -50,17 +56,17 @@ public class GameManagerScript : MonoBehaviour
 
             }
         }
-
-        if (!isPaused)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
+        if (PauseMenuInstance != null)
+            if (!isPaused)
             {
-                Debug.Log("PAUSE");
-                isPaused = true;
-                PauseMenuInstance.SetActive(true);
-                Time.timeScale = 0;
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    Debug.Log("PAUSE");
+                    isPaused = true;
+                    PauseMenuInstance.SetActive(true);
+                    Time.timeScale = 0;
+                }
             }
-        }
     }
 
 
